@@ -1,0 +1,99 @@
+/* SkyWorld day / night theme. Light = default look. Dark = html[data-theme="dark"] */
+
+/* ---- toggle button (works in light + dark) ---- */
+.themebtn{display:inline-flex;align-items:center;justify-content:center;gap:6px;flex:none;cursor:pointer;border-radius:99px!important;padding:7px 12px!important;line-height:1.2;font-size:.85rem;font-weight:600;background:rgba(176,224,230,.22)!important;color:#FFF8E7!important;border:1px solid rgba(255,255,255,.35)!important;box-shadow:none;transition:background .2s,transform .2s,box-shadow .2s}
+.themebtn:hover{background:rgba(176,224,230,.4)!important;box-shadow:0 0 14px var(--glow)!important}
+.themebtn:active{transform:scale(.94)}
+.themebtn .ti{font-size:1.1rem;line-height:1;display:inline-block;transition:transform .45s ease}
+.themebtn:hover .ti{transform:rotate(25deg) scale(1.15)}
+/* owner: sits at the right end of the brand row */
+aside .brand .themebtn{margin-left:auto;padding:7px 9px!important}
+aside .brand .themebtn .tx{display:none}
+/* login screens (no header yet): floating corner button */
+.themebtn.float{position:fixed;top:14px;right:14px;z-index:70;background:var(--royal)!important;color:#fff!important;box-shadow:0 4px 14px rgba(31,58,138,.3)}
+@media(max-width:760px){.themebtn .tx{display:none!important}.themebtn{padding:7px 10px!important}header .themebtn .tx{display:none}}
+
+html.theme-anim,html.theme-anim *{transition:background-color .35s ease,color .35s ease,border-color .35s ease!important}
+
+/* ================= DARK MODE ================= */
+html[data-theme="dark"]{
+  color-scheme:dark;
+  --royal:#5a7bf0; --royal-d:#4565d8; --royal-dd:#d4e0ff;      /* royal-dd is used as heading text */
+  --powder:#2a3b82; --powder-l:#1a2557; --powder-d:#3b4f9f;
+  --cream:#FFF8E7; --cream-d:#1b2550; --paper:#162044;
+  --glow:rgba(110,140,255,.45); --glow-soft:rgba(90,123,240,.5);
+  --ok:#4cd39a; --wa:#f0b429; --er:#ff7b86;
+  --bg:#0c1230; --card:#162044; --tx:#e7ecff; --mu:#9fabd6; --bd:#27336b;
+}
+html[data-theme="dark"] body{background:var(--bg);color:var(--tx)}
+
+/* inputs */
+html[data-theme="dark"] input,html[data-theme="dark"] select,html[data-theme="dark"] textarea{background:#0f1838;border-color:#35448a;color:var(--tx)}
+html[data-theme="dark"] input::placeholder,html[data-theme="dark"] textarea::placeholder{color:#7886b8}
+html[data-theme="dark"] input:focus,html[data-theme="dark"] select:focus,html[data-theme="dark"] textarea:focus{outline-color:var(--powder-d)}
+
+/* buttons */
+html[data-theme="dark"] button.sec{background:var(--powder);color:#dbe5ff;border-color:var(--powder-d)}
+html[data-theme="dark"] button.sec:hover{background:var(--powder-d)}
+html[data-theme="dark"] button.dng{background:#4a1f2a;color:#ff9aa3} html[data-theme="dark"] button.dng:hover{background:#5e2633}
+html[data-theme="dark"] button.gr{background:#26315f;color:#c9d3f5} html[data-theme="dark"] button.gr:hover{background:#31407a}
+html[data-theme="dark"] .btn-like,html[data-theme="dark"] .chip,html[data-theme="dark"] .off{background:var(--powder);color:#dbe5ff}
+html[data-theme="dark"] .cap-r{background:var(--powder)!important;color:#dbe5ff!important}
+
+/* auth screens */
+html[data-theme="dark"] .auth-l{background:linear-gradient(135deg,#0a1030,#1f3a8a 60%,#3d58c7)}
+html[data-theme="dark"] .auth-r{background:var(--bg)}
+html[data-theme="dark"] .auth{background:linear-gradient(135deg,#0a1030,#1f3a8a 70%,#162044)}
+html[data-theme="dark"] .abox,html[data-theme="dark"] .auth-box{background:var(--paper);border-color:var(--powder-d);box-shadow:0 10px 40px rgba(0,0,0,.5)}
+html[data-theme="dark"] .cap-code{background:repeating-linear-gradient(45deg,#1a2557,#1a2557 6px,#222f6b 6px,#222f6b 12px);border-color:var(--powder-d);color:#dbe5ff}
+
+/* nav: sidebar (owner) + header (store) */
+html[data-theme="dark"] aside{background:rgba(9,14,40,.84);border-right-color:rgba(255,255,255,.1)}
+html[data-theme="dark"] aside nav button.on{background:var(--powder-d);color:#fff}
+html[data-theme="dark"] header{background:rgba(9,14,40,.76);border-bottom-color:rgba(255,255,255,.14)}
+@media(max-width:900px){html[data-theme="dark"] aside{background:rgba(9,14,40,.82)}}
+html[data-theme="dark"] .top{background:rgba(22,32,68,.6)!important;border-color:var(--bd)!important;box-shadow:0 4px 20px rgba(0,0,0,.35)!important}
+html[data-theme="dark"] header .bd{background:var(--powder-d);color:#fff}
+
+/* surfaces */
+html[data-theme="dark"] .card,html[data-theme="dark"] .stat,html[data-theme="dark"] .panel,html[data-theme="dark"] .stall,html[data-theme="dark"] .pc,html[data-theme="dark"] .slist,html[data-theme="dark"] .set-top,html[data-theme="dark"] .modal{background:var(--paper);border-color:var(--bd)}
+html[data-theme="dark"] th{background:var(--powder-l);color:#cfdcff}
+html[data-theme="dark"] .list-i.unread,html[data-theme="dark"] .li.un{background:var(--powder-l)}
+html[data-theme="dark"] .overlay{background:rgba(2,5,20,.72)}
+html[data-theme="dark"] .toast{background:#25347a} html[data-theme="dark"] .toast.ok{background:#17795a} html[data-theme="dark"] .toast.er{background:#b23440}
+html[data-theme="dark"] .savebar{background:#25347a}
+html[data-theme="dark"] .slist button{color:var(--tx)} html[data-theme="dark"] .slist button:hover{background:var(--powder-l)}
+html[data-theme="dark"] .slist button.on{background:var(--royal);color:#fff}
+html[data-theme="dark"] .slist button .ic,html[data-theme="dark"] .av-pick button{background:var(--powder-l)!important}
+html[data-theme="dark"] .tabs button,html[data-theme="dark"] .cats button{background:var(--powder-l);color:#cfdcff;border-color:var(--powder-d)}
+html[data-theme="dark"] .tabs button.on,html[data-theme="dark"] .cats button.on{background:var(--royal);color:#fff;border-color:var(--royal)}
+html[data-theme="dark"] .chips button{background:#0f1838;color:var(--tx);border-color:#35448a}
+html[data-theme="dark"] .chips button.on{background:var(--powder);color:#fff;border-color:var(--royal)}
+html[data-theme="dark"] .qty{border-color:#35448a} html[data-theme="dark"] .qty button{background:var(--powder);color:#dbe5ff}
+html[data-theme="dark"] .pm{background:#0f1838;border-color:#35448a} html[data-theme="dark"] .pm:has(input:checked){background:var(--powder-l);border-color:var(--royal)}
+html[data-theme="dark"] .stp div{background:#1a2557;color:#9fabd6} html[data-theme="dark"] .stp .on{background:var(--powder-d);color:#fff}
+html[data-theme="dark"] .linkbox,html[data-theme="dark"] .linked{background:var(--powder-l);border-color:var(--powder-d)}
+html[data-theme="dark"] .starpick button{background:#0f1838;border-color:#35448a;color:#55608f} html[data-theme="dark"] .starpick button.on{background:#3a3010;color:#f5b301;border-color:#f5b301}
+html[data-theme="dark"] .rvc,html[data-theme="dark"] .pre{color:#c3cdf0}
+html[data-theme="dark"] .rv-pics>img,html[data-theme="dark"] .rvpics>img,html[data-theme="dark"] .rvp img,html[data-theme="dark"] .preview{border-color:var(--bd)}
+html[data-theme="dark"] .pc .pr s{color:#7f8cba}
+
+/* status badges */
+html[data-theme="dark"] .b-in,html[data-theme="dark"] .b-Delivered{background:#124634;color:#5fe0aa}
+html[data-theme="dark"] .b-low,html[data-theme="dark"] .b-Shipped{background:#4a3a0c;color:#f6c453}
+html[data-theme="dark"] .b-out{background:#4d1d27;color:#ff8f99}
+html[data-theme="dark"] .b-To{background:var(--powder);color:#dbe5ff}
+html[data-theme="dark"] .b-Cancelled{background:#2a3050;color:#aab3d6}
+
+/* chart */
+html[data-theme="dark"] .chart{border-bottom-color:var(--bd)}
+html[data-theme="dark"] hr,html[data-theme="dark"] [style*="border-top:1px solid #eee"]{border-color:var(--bd)!important}
+
+/* a few inline-styled bits in the JS */
+html[data-theme="dark"] [style*="color:#444"]{color:#c3cdf0!important}
+html[data-theme="dark"] [style*="background:#fde0e2"]{background:#4d1d27!important;color:#ffb3ba}
+html[data-theme="dark"] [style*="background:#eee"]{background:#26315f!important;color:#c9d3f5}
+html[data-theme="dark"] [style*="color:#5d6b94"]{color:var(--mu)!important}
+html[data-theme="dark"] .empty{color:var(--mu)}
+html[data-theme="dark"] ::-webkit-scrollbar{width:10px;height:10px} html[data-theme="dark"] ::-webkit-scrollbar-thumb{background:#33428a;border-radius:8px} html[data-theme="dark"] ::-webkit-scrollbar-track{background:#0c1230}
+html[data-theme="dark"] a{color:#8ea8ff}
